@@ -1,0 +1,299 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    font-family: Arial, sans-serif; /* Fuente general */
+    font-size: 16px; /* Tamaño de fuente base */
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9c9c9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #ff6b6b;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Encabezado */
+header {
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 0 #000, /* Borde izquierdo y abajo */
+                 -2px -2px 0 #000, /* Borde derecho y arriba */
+                 -2px 2px 0 #000, /* Borde derecho y abajo */
+                 2px -2px 0 #000; /* Borde izquierdo y arriba */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 #000, /* Borde izquierdo y abajo */
+                 -1px -1px 0 #000, /* Borde derecho y arriba */
+                 -1px 1px 0 #000, /* Borde derecho y abajo */
+                 1px -1px 0 #000; /* Borde izquierdo y arriba */
+}
+
+
+.cta-button {
+    background-color: #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff3b3b;
+}
+
+/* Estilos para la sección de productos */
+#productos {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 28px;
+    color: #27ae60;
+    margin-bottom: 30px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.producto a.pedido-link {
+    font-size: 16px;
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.producto a.pedido-link:hover {
+    color: #1e8449;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+#prensado-en-frio {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: justify;
+}
+
+.producto-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-detalle img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.descripcion {
+    max-width: 600px;
+}
+
+.descripcion h3 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.descripcion p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos para ventana modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Estilos mejorados para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijado para que siempre esté en pantalla */
+    z-index: 1; /* Se coloca por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupará el 100% del ancho */
+    height: 100%; /* Ocupará el 100% del alto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    overflow: auto; /* Permitir scroll si el contenido es demasiado grande */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Centrado vertical y horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 90%; /* Tamaño responsivo */
+    max-width: 500px; /* No más ancho que 500px en pantallas grandes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mejora para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Asegurarse que ocupe casi todo el ancho en móviles */
+        margin: 5% auto; /* Reducir margen superior para aprovechar el espacio */
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.5em; /* Ajustar el tamaño del texto en móviles */
+    }
+
+    p, ul, li {
+        font-size: 1em; /* Texto más cómodo para leer en pantallas pequeñas */
+    }
+}
+
+.pedido-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px; /* Agregar margen superior */
+    display: inline-block;
+}
+
+
+#testimonios {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#testimonios h2 {
+    color: #27ae60;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonio {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.testimonio cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff6b6b;
+}

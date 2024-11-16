@@ -430,6 +430,7 @@ footer a {
     color: #555; /* Gris oscuro para el texto */
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .mision-vision-valores {

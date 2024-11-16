@@ -45,33 +45,42 @@ header {
 
 header h1 {
     font-size: 3rem;
-    text-shadow: 2px 2px 0 #000, /* Borde izquierdo y abajo */
-                 -2px -2px 0 #000, /* Borde derecho y arriba */
-                 -2px 2px 0 #000, /* Borde derecho y abajo */
-                 2px -2px 0 #000; /* Borde izquierdo y arriba */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 0 #000, /* Borde izquierdo y abajo */
-                 -1px -1px 0 #000, /* Borde derecho y arriba */
-                 -1px 1px 0 #000, /* Borde derecho y abajo */
-                 1px -1px 0 #000; /* Borde izquierdo y arriba */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
 .cta-button {
+    display: inline-block;
     background-color: #ff6b6b;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 30px;
     font-size: 1.2rem;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 10px; /* Espaciado entre botones */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .cta-button:hover {
     background-color: #ff3b3b;
+    transform: scale(1.05); /* Pequeño efecto de zoom */
 }
+
+/* Evitar solapamientos en pantallas pequeñas */
+@media (max-width: 768px) {
+    .cta-button {
+        display: block;
+        width: 80%; /* Botones más grandes en dispositivos pequeños */
+        margin: 10px auto; /* Centrados automáticamente */
+    }
+}
+
 
 /* Estilos para la sección de productos */
 #productos {
@@ -247,6 +256,10 @@ header p {
     display: inline-block;
 }
 
+#prensado-en-frio h2 {
+text-align: center;
+padding: 5px;
+}
 
 #testimonios {
     background-color: #f4f4f4;
@@ -296,4 +309,171 @@ footer {
 
 footer a {
     color: #ff6b6b;
+}
+
+#precios {
+    background-color: #fff7e6;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#precios h2 {
+    font-size: 28px;
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.precios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.precio-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #e63946;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.precio-item.oferta {
+    background-color: #ffebee;
+    border-color: #ff6f61;
+}
+
+.precio-item.mayorista {
+    background-color: #e6f4ea;
+    border-color: #4caf50;
+}
+
+.precio-item h3 {
+    font-size: 22px;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.precio-item.mayorista h3 {
+    color: #4caf50;
+}
+
+.precio {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.precio span {
+    font-size: 18px;
+    color: #777;
+}
+
+.precio-antes {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.nota {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Estilos del botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 15%; /* Ancho cuadrado */
+    height: 15%; /* Altura cuadrada */
+    background-image: url(img/whatsappboton.png); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen se ajuste al botón */
+    text-indent: -9999px; /* Oculta el texto del botón */
+    cursor: pointer;
+    background-position: center; /* Posición centrada de la imagen */
+}
+
+#sobre-nosotros {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sobre-nosotros h2 {
+    font-size: 28px;
+    color: #e63946; /* Rojo para el título */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#sobre-nosotros p {
+    font-size: 18px;
+    color: #555; /* Gris oscuro para el texto */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.mision-vision-valores {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.mision, .vision, .valores {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border: 2px solid #e63946;
+}
+
+.mision h3, .vision h3, .valores h3 {
+    font-size: 22px;
+    color: #e63946; /* Rojo para los subtítulos */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.mision p, .vision p, .valores ul {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.valores ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.valores li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.valores strong {
+    color: #e63946; /* Resaltar las palabras clave */
 }

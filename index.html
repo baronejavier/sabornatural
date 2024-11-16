@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6PF9H76F5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-R6PF9H76F5');
-    </script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Disfruta de los helados frescos, naturales y sin conservantes de Sabor Natural de Misiones. Calidad y sabor en cada bocado.">
@@ -23,12 +15,15 @@
 <header>
     <h1>Sabor Natural de Misiones</h1>
     <p>Helados frescos, saludables y sin conservantes</p>
-    <a href="#productos" class="cta-button">Explora nuestros sabores</a>
+    <a href="#productos" class="cta-button">Descubre nuestros sabores</a>
+    <a href="#prensado-en-frio" class="cta-button">¿Por qué son únicos?</a>
+    <a href="#precios" class="cta-button">Precios y Beneficios</a>
+    <a href="#sobre-nosotros" class="cta-button">¿Quiénes Somos?</a>
 </header>
 
   <!-- Sección de Productos -->
 <section id="productos">
-    <h2>Nuestros Helados</h2>
+    <h2>Nuestros Sabores de Helados</h2>
     <div class="productos-grid">
         <div class="producto">
             <img src="img/banana.jpg" alt="Helado de Banana">
@@ -49,10 +44,10 @@
             <button class="pedido-btn" onclick="openModal('modal-manzana')">Conocer más</button>
         </div>
         <div class="producto">
-            <img src="img/kiwi.jpg" alt="Helado de Kiwi">
-            <h3>Helado de Kiwi</h3>
-            <p>Kiwis naturales, refrescantes y saludables.</p>
-            <button class="pedido-btn" onclick="openModal('modal-kiwi')">Conocer más</button>
+            <img src="img/frutilla.jpg" alt="Helado de Kiwi">
+            <h3>Helado de Frutilla</h3>
+            <p>Frutillas naturales, refrescantes y saludables.</p>
+            <button class="pedido-btn" onclick="openModal('modal-frutilla')">Conocer más</button>
         </div>
         <div class="producto">
             <img src="img/durazno.jpg" alt="Helado de Durazno">
@@ -61,10 +56,10 @@
             <button class="pedido-btn" onclick="openModal('modal-durazno')">Conocer más</button>
         </div>
         <div class="producto">
-            <img src="img/mix.jpg" alt="Helado Mix Frutal">
-            <h3>Helado de Mix Frutal</h3>
-            <p>La mezcla perfecta de frutas frescas para una explosión de sabor.</p>
-            <button class="pedido-btn" onclick="openModal('modal-mix')">Conocer más</button>
+            <img src="img/kiwi.jpg" alt="Helado de Kiwi">
+            <h3>Helado de Kiwi</h3>
+            <p>Kiwis exóticos, refrescantes y llenos de vitaminas.</p>
+            <button class="pedido-btn" onclick="openModal('modal-kiwi')">Conocer más</button>
         </div>
     </div>
 </section>
@@ -76,9 +71,7 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal('modal-banana')">&times;</span>
         <h3>Helado de Banana</h3>
-        <p>Disfruta de nuestro helado de banana, hecho con bananas frescas y naturales, sin conservantes. ¡La opción perfecta para un día caluroso!</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('banana')">¡Quiero mi helado!</button>
+        <p>Disfruta de nuestro helado de banana, hecho con bananas frescas y naturales, sin conservantes. ¡La opción perfecta para un día caluroso!</p>       
     </div>
 </div>
 
@@ -88,8 +81,6 @@
         <span class="close" onclick="closeModal('modal-naranja')">&times;</span>
         <h3>Helado de Naranja</h3>
         <p>Nuestro helado de naranja está hecho con naranjas frescas y jugosas, brindando una explosión de vitamina C en cada bocado.</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('naranja')">¡Quiero mi helado!</button>
     </div>
 </div>
 
@@ -99,19 +90,15 @@
         <span class="close" onclick="closeModal('modal-manzana')">&times;</span>
         <h3>Helado de Manzana</h3>
         <p>Hecho con manzanas crocantes y naturales, este helado es una deliciosa opción sin ningún aditivo artificial.</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('manzana')">¡Quiero mi helado!</button>
     </div>
 </div>
 
-<!-- Modal de Helado de Kiwi -->
-<div id="modal-kiwi" class="modal">
+<!-- Modal de Helado de Frutillas -->
+<div id="modal-frutilla" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-kiwi')">&times;</span>
-        <h3>Helado de Kiwi</h3>
-        <p>Refrescante y saludable, nuestro helado de kiwi está hecho con kiwis naturales para un sabor único y revitalizante.</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('kiwi')">¡Quiero mi helado!</button>
+        <span class="close" onclick="closeModal('modal-frutilla')">&times;</span>
+        <h3>Helado de Frutilla</h3>
+        <p>Refrescante y saludable, nuestro helado de frutilla está hecho con frutillas naturales para un sabor único y revitalizante.</p>
     </div>
 </div>
 
@@ -121,19 +108,15 @@
         <span class="close" onclick="closeModal('modal-durazno')">&times;</span>
         <h3>Helado de Durazno</h3>
         <p>Nuestro helado de durazno, hecho con duraznos jugosos, ofrece un sabor que no olvidarás. ¡Perfecto para disfrutar en cualquier momento!</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('durazno')">¡Quiero mi helado!</button>
     </div>
 </div>
 
-<!-- Modal de Helado de Mix Frutal -->
-<div id="modal-mix" class="modal">
+<!-- Modal de Helado de Kiwi -->
+<div id="modal-kiwi" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-mix')">&times;</span>
-        <h3>Helado de Mix Frutal</h3>
-        <p>La mezcla perfecta de frutas frescas para una explosión de sabor. ¡Este helado es ideal para los amantes de la variedad!</p>
-        <p><strong>¿Te gustaría probarlo?</strong></p>
-        <button class="pedido-btn" onclick="makeOrder('Mix Frutal')">¡Quiero mi helado!</button>
+        <span class="close" onclick="closeModal('modal-kiwi')">&times;</span>
+        <h3>Helado de Kiwi</h3>
+        <p>Disfruta de nuestro helado de kiwi, hecho con kiwis frescos y exóticos para una experiencia refrescante y llena de vitaminas.</p>
     </div>
 </div>
 
@@ -141,7 +124,7 @@
 <section id="prensado-en-frio">
     <h2>Tecnología de Prensado en Frío</h2>
     <div class="producto-detalle">
-        <img src="img/helado.jpg" alt="Tecnología de prensado en frío">
+        <img src="img/Sabor Natural.png" alt="Tecnología de prensado en frío">
         <div class="descripcion">
             <h3>La forma más natural de extraer lo mejor de las frutas</h3>
             <p>
@@ -155,32 +138,84 @@
                 Además, al no romper las paredes celulares de manera agresiva, los jugos extraídos tienen una textura más suave y natural, 
                 sin la pérdida de frescura ni calidad, lo que se traduce en helados más cremosos y llenos de vida.
             </p>
+            <p>
+                Nuestros helados se preparan al momento del pedido, asegurando la máxima frescura y calidad. 
+                Este método nos permite ofrecer un producto excepcionalmente fresco, donde cada bocado refleja el auténtico sabor y los beneficios 
+                de las frutas seleccionadas. Creemos en la importancia de servir helados que no solo sean deliciosos, sino también recién elaborados 
+                para garantizar una experiencia única y saludable para nuestros clientes.
+            </p>
         </div>
     </div>
 </section>
-    
-    <!-- Sección de Testimonios -->
-<section id="testimonios">
-    <h2>Lo que dicen nuestros clientes</h2>
-    <div class="testimonios-container">
-        <div class="testimonio">
-            <p>"Estos helados son <strong>deliciosos</strong> y totalmente <strong>saludables</strong>. ¡Mis hijos los adoran!"</p>
-            <cite>- Laura G.</cite>
+
+<!-- Sección de Precios -->
+<section id="precios">
+    <h2>Precios y Promociones</h2>
+    <div class="precios-grid">
+        <div class="precio-item">
+            <h3>Pote Individual</h3>
+            <p class="precio">$5.500</p>
+            <p>Helado fresco y natural en un práctico pote de 300 g.</p>
         </div>
-        <div class="testimonio">
-            <p>"Una opción <strong>refrescante</strong> y sin culpa. Me encanta que no tengan <strong>conservantes</strong>."</p>
-            <cite>- Carlos M.</cite>
+        <div class="precio-item oferta">
+            <h3>Promo Especial</h3>
+            <p class="precio">$5.000<span class="precio-antes">$5.500</span></p>
+            <p>Llevando 3 potes de 300 g cada uno. ¡Elige tus sabores favoritos!</p>
         </div>
-        <div class="testimonio">
-            <p>"He probado muchos helados naturales, pero estos son de lejos los <strong>más cremosos</strong> y llenos de sabor."</p>
-            <cite>- Verónica P.</cite>
+        <div class="precio-item mayorista">
+            <h3>Precio Mayorista</h3>
+            <p class="precio">$4.200 <span>/unidad</span></p>
+            <p>Aplica para pedidos a partir de 10 unidades. Ideal para negocios o eventos.</p>
         </div>
-        <div class="testimonio">
-            <p>"Me sorprendió la <strong>calidad</strong> y la frescura de cada sabor. Definitivamente mis favoritos para el verano."</p>
-            <cite>- Martín D.</cite>
+    </div>
+    <p class="nota">Nuestros helados son preparados al momento del pedido para garantizar la máxima frescura y calidad.</p>
+</section>
+
+<section id="sobre-nosotros">
+    <div class="contenedor">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            Bienvenidos a <strong>Sabor Natural de Misiones</strong>, una empresa orgullosamente ubicada en 
+            <strong>Posadas, Misiones</strong>. Nos dedicamos a elaborar helados y productos saludables utilizando 
+            ingredientes frescos y tecnología de prensado en frío, para garantizar el mejor sabor y la máxima calidad 
+            en cada bocado.
+        </p>
+        <p>
+            Nuestro compromiso es ofrecer opciones deliciosas y nutritivas que realcen el valor de los alimentos naturales, 
+            apoyando un estilo de vida equilibrado y saludable. Gracias por confiar en nosotros y permitirnos ser parte 
+            de tus momentos especiales.
+        </p>
+
+        <div class="mision-vision-valores">
+            <div class="mision">
+                <h3>Misión</h3>
+                <p>
+                    Crear productos innovadores, saludables y deliciosos que enriquezcan la vida de nuestros clientes, 
+                    destacando el sabor y la frescura de los ingredientes naturales propios de nuestra región.
+                </p>
+            </div>
+            <div class="vision">
+                <h3>Visión</h3>
+                <p>
+                    Ser reconocidos como líderes en la elaboración de helados saludables que combinan valor nutricional 
+                    excepcional con sabores auténticos, promoviendo un estilo de vida equilibrado y consciente.
+                </p>
+            </div>
+            <div class="valores">
+                <h3>Valores</h3>
+                <ul>
+                    <li><strong>Calidad:</strong> Nos aseguramos de que cada producto cumpla con los más altos estándares.</li>
+                    <li><strong>Innovación:</strong> Buscamos constantemente nuevas formas de mejorar y sorprender a nuestros clientes.</li>
+                    <li><strong>Sostenibilidad:</strong> Utilizamos prácticas responsables para cuidar nuestro entorno.</li>
+                    <li><strong>Compromiso:</strong> Estamos dedicados a ofrecer productos que aporten bienestar.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
+
+
+
 
 
     <!-- Pie de Página -->
@@ -195,4 +230,7 @@
     <!-- Incluir el archivo JavaScript -->
     <script src="scripts.js"></script>
 </body>
+<div class="social-media">
+    <a class="whatsapp-button" href="https://wa.me/543794884299?text=¡Hola! Quiero obtener más información sobre Sabor Natural de Misiones." target="_blank">WhatsApp</a>
+    </div>
 </html>
